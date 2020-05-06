@@ -1,9 +1,13 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, ButtonHTMLAttributes } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { Container } from './styles';
 
-const CategoryButton: React.FC = () => {
+interface CategoryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  category: string;
+}
+
+const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
   const history = useHistory();
 
   const navigateToJoke = useCallback(() => {
@@ -12,7 +16,7 @@ const CategoryButton: React.FC = () => {
 
   return (
     <Container onClick={navigateToJoke}>
-      <span>Animal</span>
+      <span>{category}</span>
     </Container>
   );
 };
