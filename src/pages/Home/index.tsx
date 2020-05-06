@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactLoading from 'react-loading';
 
 import Logo from '../../components/Logo';
 import CategoryButton from '../../components/CategoryButton';
@@ -9,11 +10,13 @@ import { Container } from './styles';
 
 const Home: React.FC = () => {
   const [categories, setCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadCategories() {
       const response = await api.get('categories');
       setCategories(response.data);
+      setLoading(false);
     }
 
     loadCategories();
@@ -27,6 +30,9 @@ const Home: React.FC = () => {
           <p>Select a categorie for a random Chuck&apos;s joke</p>
         </header>
 
+        {loading && (
+          <ReactLoading type="bars" color="#F2591F" height={56} width={56} />
+        )}
         <main>
           {categories.map(category => (
             <CategoryButton key={category} category={category} />
