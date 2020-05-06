@@ -15,6 +15,12 @@
   <a href="https://www.codacy.com/manual/luanfonsecap/jokes-norris?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luanfonsecap/jokes-norris&amp;utm_campaign=Badge_Grade">
     <img alt="Code Quality" src="https://api.codacy.com/project/badge/Grade/7f66d2b032894ce192ccef5dee02d3a7">
   </a>
+  
+  <p align="center">
+    <a href="https://app.netlify.com/sites/jokes-norris/deploys">
+      <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/2808add5-ff8e-441f-9f51-1226c7031112/deploy-status">
+    </a>
+  </p>
 
   <br>
 
@@ -31,6 +37,8 @@
 e exibe piadas sobre o personagem apartir de uma categoria selecionada.
 
 <br>
+
+Você pode testar a aplicação hospeda [clicando aqui](https://jokes-norris.netlify.app/).
 
 <img alt="Gif de Exemplo" src="https://raw.githubusercontent.com/luanfonsecap/jokes-norris/master/assets/norris-jokes-example.gif" />
 
