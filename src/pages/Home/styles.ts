@@ -5,11 +5,11 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  height: 100vh;
   max-width: 80%;
   margin: 0 auto;
+  margin-bottom: 48px;
 
-  header {
+  header   {
     margin: 40px 0 48px;
 
     display: flex;
@@ -30,7 +30,11 @@ export const Container = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 16px;
     grid-row-gap: 32px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 2fr);
+      grid-column-gap: 32px;
+      grid-row-gap: 64px;
+    }
   }
 `;
-
-
