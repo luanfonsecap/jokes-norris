@@ -22,7 +22,7 @@ export const Container = styled.footer`
   }
 
   @media (min-width: 768px){
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
 `;
