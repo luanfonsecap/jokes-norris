@@ -5,19 +5,19 @@
 </h1>
 
 <p align="center">
- 
+
    <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-blue">
-  
+
   <img alt="TypeScript Language" src="https://img.shields.io/badge/typescript-94%25-blue">
-  
+
   <img alt="Languages" src="https://img.shields.io/badge/languages-1-blue">
-  
+
   <a href="https://www.codacy.com/manual/luanfonsecap/jokes-norris?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luanfonsecap/jokes-norris&amp;utm_campaign=Badge_Grade">
     <img alt="Code Quality" src="https://api.codacy.com/project/badge/Grade/7f66d2b032894ce192ccef5dee02d3a7">
   </a>
- 
+
   <br>
-  
+
   <p align="center">
     :sparkles: Desafio frontend proposto no Github da <a href="https://github.com/GuiaBolso/seja-um-guia-front">Guia Bolso</a>
   </p>
@@ -27,7 +27,7 @@
 
 # :muscle: O Projeto
 
-**Jokes Norris** é uma aplicação que consome a api do <a href="https://api.chucknorris.io/">Chuck Norris IO</a> 
+**Jokes Norris** é uma aplicação que consome a api do <a href="https://api.chucknorris.io/">Chuck Norris IO</a>
 e exibe piadas sobre o personagem apartir de uma categoria selecionada.
 
 <br>

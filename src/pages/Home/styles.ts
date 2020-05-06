@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 3rem;
 
-  header   {
+  header {
     margin: 40px 0 48px;
 
     display: flex;
@@ -20,7 +20,7 @@ export const Container = styled.div`
       font-weight: 300;
 
       font-size: 1rem;
-      color: #8D6236;
+      color: #8d6236;
       text-align: center;
     }
   }
@@ -30,7 +30,6 @@ export const Container = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 16px;
     grid-row-gap: 32px;
-
   }
 
   @media (min-width: 768px) {

@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <Container>
       <p>
-        Jokes powered by{' '}
+        Jokes powered by
         <a target="blank" href="https://api.chucknorris.io/">
           Chuck Norris IO
         </a>
