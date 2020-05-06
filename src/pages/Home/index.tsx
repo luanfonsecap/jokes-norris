@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from '../../components/Logo'
+import Logo from '../../components/Logo';
 import CategoryButton from '../../components/CategoryButton';
 import Footer from '../../components/Footer';
 
@@ -12,7 +12,7 @@ const Home: React.FC = () => {
       <Container>
         <header>
           <Logo />
-          <p>Select a categorie for a random Chuck's joke</p>
+          <p>Select a categorie for a random Chuck&apos;s joke</p>
         </header>
 
         <main>
@@ -37,7 +37,6 @@ const Home: React.FC = () => {
       <Footer />
     </>
   );
-
-}
+};
 
 export default Home;
