@@ -11,7 +11,7 @@ import { useJoke } from '../../hooks/joke';
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
 
 const Joke: React.FC = () => {
-  const [clicked, setClicked] = useState(false);
+  const [hasClicked, setClicked] = useState(false);
 
   const { category } = useParams();
   const { joke, loadJoke } = useJoke();
@@ -46,7 +46,7 @@ const Joke: React.FC = () => {
             <span>{joke.categories}</span>
           </Badge>
         </JokeBox>
-        <ReloadButton clicked={clicked} onClick={() => setClicked(true)}>
+        <ReloadButton hasClicked={hasClicked} onClick={reloadJoke}>
           <img src={reloadImg} alt="Reload button to another joke" />
         </ReloadButton>
       </Container>
