@@ -14,4 +14,11 @@ export const Container = styled.button`
     color: #fff;
     font-size: 1rem;
   }
+
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.1);
+    background: #F2591F;
+  }
 `;
