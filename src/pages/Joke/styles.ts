@@ -12,7 +12,7 @@ export const Container = styled.main`
 
   max-width: 80%;
   margin: 0 auto;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 50px);
 
   img {
     margin: 40px 0 48px;
