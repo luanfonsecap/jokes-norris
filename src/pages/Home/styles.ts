@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   max-width: 80%;
   margin: 0 auto;
-  margin-bottom: 84px;
+  margin-bottom: 3rem;
 
   header   {
     margin: 40px 0 48px;
@@ -31,10 +31,19 @@ export const Container = styled.div`
     grid-column-gap: 16px;
     grid-row-gap: 32px;
 
-    @media (min-width: 768px) {
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 5rem;
+
+    main {
       grid-template-columns: repeat(4, 2fr);
       grid-column-gap: 32px;
       grid-row-gap: 64px;
+    }
+
+    header p {
+      font-size: 2rem;
     }
   }
 `;

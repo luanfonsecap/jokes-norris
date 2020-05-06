@@ -34,7 +34,7 @@ export const JokeBox = styled.section`
   align-items: center;
   text-align: center;
   font-size: 1rem;
-  line-height: 1.4rem;
+  line-height: 1.7rem;
 
   position: relative;
 `;

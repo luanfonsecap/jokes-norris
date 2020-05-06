@@ -11,11 +11,11 @@ export const Container = styled.footer`
   align-items: center;
 
   p {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 300;
 
     a {
-      font-size: 1rem;
+      font-size: .8rem;
       font-weight: bold;
       text-decoration: none;
     }
@@ -24,5 +24,12 @@ export const Container = styled.footer`
   @media (min-width: 768px){
     position: fixed;
     bottom: 0;
+
+    p {
+      font-size: 1rem
+    }
+    a {
+      font-size: 1rem
+    }
   }
 `;
