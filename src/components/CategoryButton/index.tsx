@@ -8,13 +8,13 @@ const CategoryButton: React.FC = () => {
 
   const navigateToJoke = useCallback(() => {
     history.push('joke');
-  }, []);
+  }, [history]);
 
   return (
     <Container onClick={navigateToJoke}>
       <span>Animal</span>
     </Container>
   );
-}
+};
 
 export default CategoryButton;
