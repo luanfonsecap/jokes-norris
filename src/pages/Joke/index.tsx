@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import logoImg from '../../assets/logo.svg'
 import reloadImg from '../../assets/reload.svg'
@@ -7,6 +7,8 @@ import Footer from '../../components/Footer'
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
 
 const Joke: React.FC = () => {
+  const [clicked, setClicked] = useState(false);
+
   return (
     <>
       <Container>
@@ -20,7 +22,10 @@ const Joke: React.FC = () => {
           <span>Dev</span>
         </Badge>
         </JokeBox>
-        <ReloadButton>
+        <ReloadButton
+          clicked={clicked}
+          onClick={() => setClicked(true)}
+        >
           <img src={reloadImg} alt="Reload button to another joke"/>
         </ReloadButton>
       </Container>

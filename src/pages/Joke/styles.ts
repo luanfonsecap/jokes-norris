@@ -1,5 +1,9 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { shade } from 'polished';
+
+interface ReloadButtonProps {
+  clicked: boolean;
+}
 
 export const Container = styled.main`
   display: flex;
@@ -57,21 +61,19 @@ export const Badge = styled.div`
 const animationReload = keyframes`
   from {
     transform: rotate(0deg);
-    border-radius: 4px;
   }
   to {
-    transform: rotate(360deg);
-    border-radius: 50%;
+    transform: rotate(-360deg);
   }
 `;
 
-export const ReloadButton = styled.button`
+export const ReloadButton = styled.button<ReloadButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
 
   background: #F2591F;
-  border-radius: 4px;
+  border-radius: 50%;
   box-shadow: 0 0 4px #8f8f8f;
 
   position: relative;
@@ -86,8 +88,11 @@ export const ReloadButton = styled.button`
     top: -32px;
   }
 
+  ${props => props.clicked && css`
+    animation: ${animationReload} 1.2s;
+  `}
+
   &:hover {
     background: ${shade(0.1, '#F2591F')};
-    animation: ${animationReload} 1.2s forwards;
   }
 `;
