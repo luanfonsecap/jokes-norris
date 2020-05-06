@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Typist from 'react-typist';
 
 import logoImg from '../../assets/logo.svg'
 import reloadImg from '../../assets/reload.svg'
@@ -15,9 +16,9 @@ const Joke: React.FC = () => {
         <img src={logoImg} alt="Chuck Norris Character"/>
 
         <JokeBox>
-          <p>
+          <Typist avgTypingDelay={60} cursor={{ hideWhenDone: true }} >
             Chuck Norris created the Chinese basketball player, Yao Ming by means of torture stretching a sumo wrestler on \"the rack\
-          </p>
+          </Typist>
         <Badge>
           <span>Dev</span>
         </Badge>
@@ -29,7 +30,7 @@ const Joke: React.FC = () => {
           <img src={reloadImg} alt="Reload button to another joke"/>
         </ReloadButton>
       </Container>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

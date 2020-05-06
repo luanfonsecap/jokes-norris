@@ -12,7 +12,7 @@ export const Container = styled.main`
 
   max-width: 80%;
   margin: 0 auto;
-  margin-bottom: 48px;
+  height: calc(100vh - 70px);
 
   img {
     margin: 40px 0 48px;
@@ -26,8 +26,9 @@ export const JokeBox = styled.section`
   padding: 32px;
   margin-bottom: 56px;
 
-  min-width: 300px;
   min-height: 120px;
+  min-width: 300px;
+  max-width: 600px;
 
   display: flex;
   align-items: center;
