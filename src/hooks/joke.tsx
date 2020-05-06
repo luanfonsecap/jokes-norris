@@ -1,27 +1,31 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
 
-interface SelectCategoryData {
-  category: string;
+import api from '../services/api';
+
+interface AddJokeData {
+  categories: string[];
+  icon_url: string;
+  value: string;
 }
 
 interface JokeContextData {
-  joke: string;
-  category: string;
-  selectCategory(category: SelectCategoryData): void;
+  joke: AddJokeData;
+  loadJoke(category: string): void;
 }
 
 const JokeContext = createContext<JokeContextData>({} as JokeContextData);
 
 const JokeProvdier: React.FC = ({ children }) => {
-  const [joke, setJoke] = useState('');
-  const [category, setCategory] = useState('');
+  const [joke, setJoke] = useState<AddJokeData>({} as AddJokeData);
 
-  const selectCategory = useCallback(selectedCategory => {
-    setCategory(selectedCategory);
+  const loadJoke = useCallback(async category => {
+    setJoke({} as AddJokeData);
+    const response = await api.get<AddJokeData>(`/random?category=${category}`);
+    setJoke(response.data);
   }, []);
 
   return (
-    <JokeContext.Provider value={{ joke, category, selectCategory }}>
+    <JokeContext.Provider value={{ joke, loadJoke }}>
       {children}
     </JokeContext.Provider>
   );
