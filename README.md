@@ -1,44 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img alt="Logo" height="200" src="https://raw.githubusercontent.com/luanfonsecap/jokes-norris/master/src/assets/logo.svg" />
+  <br>
+  Jokes Norris
+</h1>
 
-## Available Scripts
+<p align="center">
+ 
+   <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-blue">
+  
+  <img alt="TypeScript Language" src="https://img.shields.io/badge/typescript-94%25-blue">
+  
+  <img alt="Languages" src="https://img.shields.io/badge/languages-1-blue">
+  
+  <a href="https://www.codacy.com/manual/luanfonsecap/jokes-norris?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=luanfonsecap/jokes-norris&amp;utm_campaign=Badge_Grade">
+    <img alt="Code Quality" src="https://api.codacy.com/project/badge/Grade/7f66d2b032894ce192ccef5dee02d3a7">
+  </a>
+ 
+  <br>
+  
+  <p align="center">
+    :sparkles: Desafio frontend proposto no Github da <a href="https://github.com/GuiaBolso/seja-um-guia-front">Guia Bolso</a>
+  </p>
+  <br>
+</p>
 
-In the project directory, you can run:
 
-### `yarn start`
+# :muscle: O Projeto
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Jokes Norris** é uma aplicação que consome a api do <a href="https://api.chucknorris.io/">Chuck Norris IO</a> 
+e exibe piadas sobre o personagem apartir de uma categoria selecionada.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+<img alt="Gif de Exemplo" src="https://raw.githubusercontent.com/luanfonsecap/jokes-norris/master/assets/norris-jokes-example.gif" />
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `yarn build`
+## :fire: Funcionalidades
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Selecionar uma categoria
+- Recarregar uma nova piada
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚗️ Tecnologias
 
-### `yarn eject`
+- React
+- Styled Components
+- Polished
+- React Typist
+- React Loading
+- Axios
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :rocket: Rodando o Projeto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+É necessário ter o ambiente necessário para <a href="https://pt-br.reactjs.org/">React</a>.
+<br>
+Para iniciar a aplicação clone este repositório e execute os comandos abaixo:
 
-## Learn More
+```
+cd jokes-norris
+yarn && yarn start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Se não tiver o [Yarn](https://yarnpkg.com/) pode-se utilizar o NPM.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+## :bicyclist: Roadmap
+
+- [ ] Server Side Rendering
+
+<br>
+
+## :pencil: Licença
+
+Este projeto está sob a licença MIT. Consulte a [LICENÇA](https://github.com/luanfonsecap/jokes-norris/blob/master/LICENSE) para obter mais informações.
+
+<br>
+
+---
+
+<h6 align="center">
+	Feito com :purple_heart: por Luan Fonseca
+</h6>
