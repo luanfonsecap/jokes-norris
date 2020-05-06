@@ -11,8 +11,8 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
   const history = useHistory();
 
   const navigateToJoke = useCallback(() => {
-    history.push('joke');
-  }, [history]);
+    history.push(`joke/${category}`);
+  }, [history, category]);
 
   return (
     <Container onClick={navigateToJoke}>
