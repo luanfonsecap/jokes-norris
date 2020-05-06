@@ -6,7 +6,7 @@ export const Container = styled.button`
   box-shadow: 0 0 4px #8f8f8f;
 
   padding: 16px;
-  min-width: 156px;
+  min-width: 140px;
 
   text-align: center;
 
