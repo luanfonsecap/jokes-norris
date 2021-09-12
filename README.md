@@ -33,6 +33,8 @@
 
 # :muscle: O Projeto
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6ff6d667d6214624a4744db70752ef04)](https://app.codacy.com/gh/luanfonsecap/jokes-norris?utm_source=github.com&utm_medium=referral&utm_content=luanfonsecap/jokes-norris&utm_campaign=Badge_Grade_Settings)
+
 **Jokes Norris** é uma aplicação que consome a api do <a href="https://api.chucknorris.io/">Chuck Norris IO</a>
 e exibe piadas sobre o personagem apartir de uma categoria selecionada.
 
