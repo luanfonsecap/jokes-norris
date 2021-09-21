@@ -10,6 +10,9 @@ export const Container = styled.footer`
   justify-content: center;
   align-items: center;
 
+  position: fixed;
+  bottom: 0;
+
   p {
     font-size: 0.8rem;
     font-weight: 300;
@@ -22,9 +25,6 @@ export const Container = styled.footer`
   }
 
   @media (min-width: 768px) {
-    position: fixed;
-    bottom: 0;
-
     p {
       font-size: 1rem;
     }
