@@ -1,9 +1,5 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
-
-interface ReloadButtonProps {
-  hasClicked: boolean;
-}
 
 export const Container = styled.main`
   display: flex;
@@ -24,7 +20,7 @@ export const JokeBox = styled.section`
   box-shadow: 0 0 4px #8f8f8f;
   border-radius: 4px;
   padding: 32px;
-  margin-bottom: 56px;
+  margin-bottom: 86px;
 
   min-height: 120px;
   min-width: 300px;
@@ -53,11 +49,16 @@ export const Badge = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   position: absolute;
-  bottom: -20px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
+
+  span ~ span {
+    margin-left: 8px;
+  }
 `;
 
 const animationReload = keyframes`
@@ -69,7 +70,7 @@ const animationReload = keyframes`
   }
 `;
 
-export const ReloadButton = styled.button<ReloadButtonProps>`
+export const ReloadButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,11 +91,9 @@ export const ReloadButton = styled.button<ReloadButtonProps>`
     top: -32px;
   }
 
-  ${props =>
-    props.hasClicked &&
-    css`
-      animation: ${animationReload} 1.2s;
-    `}
+  &.hasClicked {
+    animation: ${animationReload} 1.2s;
+  }
 
   &:hover {
     background: ${shade(0.1, '#F2591F')};

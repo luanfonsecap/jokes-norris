@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import Footer from './components/Footer';
 import GlobalStyle from './css/global';
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <Routes />
       <GlobalStyle />
       <Footer />
+      <ReactTooltip effect="solid" place="bottom" />
     </>
   );
 };
