@@ -1,31 +1,37 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
 
 import api from '../services/api';
+import { WithChildren } from '../utils/WithChildren';
 
 interface AddJokeData {
   categories: string[];
-  icon_url: string;
   value: string;
 }
 
 interface JokeContextData {
   joke: AddJokeData;
   loadJoke(category: string): void;
+  loading: boolean;
 }
 
 const JokeContext = createContext<JokeContextData>({} as JokeContextData);
 
-const JokeProvdier: React.FC = ({ children }) => {
-  const [joke, setJoke] = useState<AddJokeData>({} as AddJokeData);
+const JokeProvider = ({ children }: WithChildren) => {
+  const [joke, setJoke] = useState<AddJokeData>({
+    categories: [],
+    value: '',
+  });
+  const [loading, setLoading] = useState(false);
 
   const loadJoke = useCallback(async category => {
-    setJoke({} as AddJokeData);
+    setLoading(true);
     const response = await api.get<AddJokeData>(`/random?category=${category}`);
     setJoke(response.data);
+    setLoading(false);
   }, []);
 
   return (
-    <JokeContext.Provider value={{ joke, loadJoke }}>
+    <JokeContext.Provider value={{ joke, loadJoke, loading }}>
       {children}
     </JokeContext.Provider>
   );
@@ -41,4 +47,4 @@ function useJoke() {
   return context;
 }
 
-export { useJoke, JokeProvdier };
+export { useJoke, JokeProvider };

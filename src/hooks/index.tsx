@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { JokeProvdier } from './joke';
+import { JokeProvider } from './joke';
 
 const AppProvider: React.FC = ({ children }) => (
-  <JokeProvdier>{children}</JokeProvdier>
+  <JokeProvider>{children}</JokeProvider>
 );
 
 export default AppProvider;
