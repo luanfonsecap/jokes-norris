@@ -39,7 +39,6 @@ const Home: React.FC = () => {
           ))}
         </main>
       </Container>
-      <Footer />
     </>
   );
 };
