@@ -1,20 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from '../pages/Home';
-import Joke from '../pages/Joke';
+import HomeRoutes from '../modules/Home/routes';
+import JokeRoutes from '../modules/Joke/routes';
+import { RouteWithSubRoutesProps } from './RouteWithSubRoutes';
 
-import AppProvider from '../hooks';
+const ROUTES: RouteWithSubRoutesProps[] = [...HomeRoutes, ...JokeRoutes];
 
-const Routes: React.FC = () => (
-  <Router>
-    <Switch>
-      <AppProvider>
-        <Route path="/" exact component={Home} />
-        <Route path="/joke/:category" component={Joke} />
-      </AppProvider>
-    </Switch>
-  </Router>
-);
-
-export default Routes;
+export default ROUTES;

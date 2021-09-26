@@ -11,7 +11,7 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
   const history = useHistory();
 
   const navigateToJoke = useCallback(() => {
-    history.push(`joke/${category}`);
+    history.push(`/joke/${category}`);
   }, [history, category]);
 
   return (

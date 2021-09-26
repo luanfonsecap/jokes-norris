@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
+import { BrowserRouter } from 'react-router-dom';
 
-import Footer from './components/Footer';
-import GlobalStyle from './css/global';
-import Routes from './routes';
+import Footer from './modules/common/components/Footer';
+import GlobalStyle from './modules/common/css/global';
+import ROUTES from './routes';
+import RenderRoutes from './routes/RenderRoutes';
+console.log(ROUTES);
 
 const App: React.FC = () => {
   return (
     <>
-      <Routes />
+      <BrowserRouter>
+        <RenderRoutes routes={ROUTES} />
+      </BrowserRouter>
       <GlobalStyle />
-      <Footer />
       <ReactTooltip effect="solid" place="bottom" />
+      <Footer />
     </>
   );
 };

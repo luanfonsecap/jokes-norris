@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 
 import logoImg from '../../assets/logo.svg';
 import reloadImg from '../../assets/reload.svg';
-import { useJoke } from '../../hooks/joke';
+import { useJoke } from './hooks/useJoke';
 
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
 
@@ -52,9 +52,11 @@ function Joke() {
         )}
 
         <Badge>
-          {joke.categories.map(categoryLabel => (
-            <span>{categoryLabel}</span>
-          ))}
+          {joke.categories.length ? (
+            joke.categories.map(categoryLabel => <span>{categoryLabel}</span>)
+          ) : (
+            <ReactLoading type="bars" color="#fff" height={26} width={26} />
+          )}
         </Badge>
       </JokeBox>
 

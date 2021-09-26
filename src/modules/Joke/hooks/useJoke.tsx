@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
 
-import api from '../services/api';
-import { WithChildren } from '../utils/WithChildren';
+import api from '../../common/services/api';
+import { WithChildren } from '../../common/utils/WithChildren';
 
 interface AddJokeData {
   categories: string[];
