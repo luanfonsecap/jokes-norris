@@ -5,6 +5,7 @@ import ReactLoading from 'react-loading';
 
 import logoImg from '../../assets/logo.svg';
 import reloadImg from '../../assets/reload.svg';
+import BackButton from './components/BackButton';
 import { useJoke } from './hooks/useJoke';
 
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
@@ -41,6 +42,8 @@ function Joke() {
   return (
     <Container>
       <img src={logoImg} alt="Chuck Norris Character" />
+
+      <BackButton />
 
       <JokeBox>
         {loading ? (
