@@ -3,7 +3,6 @@ import ReactLoading from 'react-loading';
 
 import Logo from '../../components/Logo';
 import CategoryButton from '../../components/CategoryButton';
-import Footer from '../../components/Footer';
 import api from '../../services/api';
 
 import { Container } from './styles';
