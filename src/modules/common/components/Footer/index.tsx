@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const Footer: React.FC = () => {
+function Footer() {
   return (
     <Container>
       <p>
@@ -14,6 +14,6 @@ const Footer: React.FC = () => {
       </p>
     </Container>
   );
-};
+}
 
 export default Footer;
