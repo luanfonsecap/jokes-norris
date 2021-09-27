@@ -3,18 +3,21 @@ import ReactLoading from 'react-loading';
 
 import Logo from '../common/components/Logo';
 import CategoryButton from './components/CategoryButton';
-import api from '../common/services/api';
+import api from '../common/services/client';
 
 import { Container } from './styles';
+import CategoriesService from '../common/services/categoriesService';
 
 function Home() {
   const [categories, setCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const categoriesService = new CategoriesService();
+
   useEffect(() => {
     async function loadCategories() {
-      const response = await api.get('categories');
-      setCategories(response.data);
+      const categories = await categoriesService.getCategories();
+      setCategories(categories);
       setLoading(false);
     }
 

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
 
-import api from '../../common/services/api';
+import JokesService from '../../common/services/jokesService';
 import { WithChildren } from '../../common/utils/WithChildren';
 
 interface AddJokeData {
@@ -22,11 +22,12 @@ const JokeProvider = ({ children }: WithChildren) => {
     value: '',
   });
   const [loading, setLoading] = useState(false);
+  const jokesService = new JokesService();
 
   const loadJoke = useCallback(async category => {
     setLoading(true);
-    const response = await api.get<AddJokeData>(`/random?category=${category}`);
-    setJoke(response.data);
+    const joke = await jokesService.getRandomJokeByCategory(category);
+    setJoke(joke);
     setLoading(false);
   }, []);
 
