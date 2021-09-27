@@ -1,21 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router';
 
 import logoImg from '../../../../assets/logo.svg';
+
 import { Container } from './styles';
 
-const Logo: React.FC = () => {
-  const [loaded, setLoaded] = useState(false);
+type LogoProps = {
+  showTitle?: boolean;
+};
 
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
+function Logo({ showTitle }: LogoProps) {
+  const history = useHistory();
 
   return (
-    <Container loaded={loaded}>
-      <img src={logoImg} alt="Chuck Norris Character" />
-      <h1>Jokes Norris</h1>
+    <Container>
+      <button onClick={() => history.push('/')}>
+        <img src={logoImg} alt="Chuck Norris Character" />
+        {showTitle ? <h1>Jokes Norris</h1> : null}
+      </button>
     </Container>
   );
-};
+}
 
 export default Logo;

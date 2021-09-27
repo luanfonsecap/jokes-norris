@@ -24,7 +24,7 @@ function Home() {
   return (
     <Container>
       <header>
-        <Logo />
+        <Logo showTitle />
         <p>Select a category for a random Chuck&apos;s joke</p>
       </header>
 

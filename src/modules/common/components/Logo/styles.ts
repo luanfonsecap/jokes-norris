@@ -1,26 +1,31 @@
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-interface LogoProps {
-  loaded: boolean;
-}
+const rotate = keyframes`
+  to {
+    transform: rotateY(0);
+  }
+  from {
+    transform: rotateY(360deg);
+  }
+`;
 
-export const Container = styled.div<LogoProps>`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  img {
-    margin: 40px 0;
-    transition: all 1s;
+  cursor: pointer;
+
+  button {
+    background: transparent;
   }
 
-  ${props =>
-    props.loaded &&
-    css`
-      img {
-        transform: rotateY(360deg);
-      }
-    `}
+  img {
+    margin: 40px 0;
+    transition: all 1.4s;
+  }
+
+  animation: ${rotate} 1s;
 
   h1 {
     font-size: 1.7rem;

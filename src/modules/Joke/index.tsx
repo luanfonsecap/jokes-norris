@@ -3,12 +3,12 @@ import { useParams } from 'react-router-dom';
 import Typist from 'react-typist';
 import ReactLoading from 'react-loading';
 
-import logoImg from '../../assets/logo.svg';
 import reloadImg from '../../assets/reload.svg';
 import BackButton from './components/BackButton';
 import { useJoke } from './hooks/useJoke';
 
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
+import Logo from '../common/components/Logo';
 
 interface RouteParams {
   category: string;
@@ -41,7 +41,7 @@ function Joke() {
 
   return (
     <Container>
-      <img src={logoImg} alt="Chuck Norris Character" />
+      <Logo />
 
       <BackButton />
 
