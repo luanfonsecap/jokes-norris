@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ReactLoading from 'react-loading';
+import { useTheme } from 'styled-components';
 
 import Logo from '../common/components/Logo';
 import CategoryButton from './components/CategoryButton';
-import api from '../common/services/client';
 
 import { Container } from './styles';
 import CategoriesService from '../common/services/categoriesService';
@@ -13,6 +13,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   const categoriesService = new CategoriesService();
+  const theme = useTheme();
 
   useEffect(() => {
     async function loadCategories() {
@@ -32,7 +33,12 @@ function Home() {
       </header>
 
       {loading ? (
-        <ReactLoading type="bars" color="#F2591F" height={56} width={56} />
+        <ReactLoading
+          type="bars"
+          color={theme.colors.primary}
+          height={56}
+          width={56}
+        />
       ) : null}
 
       <main>

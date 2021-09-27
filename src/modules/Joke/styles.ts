@@ -16,8 +16,8 @@ export const Container = styled.main`
 `;
 
 export const JokeBox = styled.section`
-  background: #fff;
-  box-shadow: 0 0 4px #8f8f8f;
+  background: ${({ theme }) => theme.colors.light};
+  box-shadow: 0 0 4px ${({ theme }) => theme.colors.shadow};
   border-radius: 4px;
   padding: 32px;
   margin-bottom: 86px;
@@ -37,13 +37,13 @@ export const JokeBox = styled.section`
 `;
 
 export const Badge = styled.div`
-  background: #8d6236;
+  background: ${({ theme }) => theme.colors.secondary};
   border-radius: 4px;
-  box-shadow: 0 0 4px #8f8f8f;
+  box-shadow: 0 0 4px ${({ theme }) => theme.colors.shadow};
 
   padding: 16px 32px;
 
-  color: #fff;
+  color: ${({ theme }) => theme.colors.textLight};
   font-weight: 300;
   height: 40px;
 
@@ -75,9 +75,9 @@ export const ReloadButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background: #f2591f;
+  background: ${({ theme }) => theme.colors.primary};
   border-radius: 50%;
-  box-shadow: 0 0 4px #8f8f8f;
+  box-shadow: 0 0 4px ${({ theme }) => theme.colors.shadow};
 
   position: relative;
 
@@ -96,6 +96,6 @@ export const ReloadButton = styled.button`
   }
 
   &:hover {
-    background: ${shade(0.1, '#F2591F')};
+    background: ${({ theme }) => shade(0.1, theme.colors.primary)};
   }
 `;

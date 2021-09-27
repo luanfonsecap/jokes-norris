@@ -9,12 +9,13 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #DFE6E9;
+    background:  ${({ theme }) => theme.colors.background};
     -webkit-font-smoothing: antialiased;
   }
 
   body, html, #root {
     font-size: 16px;
+    color: ${({ theme }) => theme.colors.textDark};
   }
 
   body, input, button {

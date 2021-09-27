@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import Typist from 'react-typist';
 import ReactLoading from 'react-loading';
+import { useTheme } from 'styled-components';
 
 import reloadImg from '../../assets/reload.svg';
 import BackButton from './components/BackButton';
@@ -18,6 +19,7 @@ function Joke() {
   const reloadButtonRef = useRef<HTMLButtonElement>(null);
   const { category } = useParams<RouteParams>();
   const { joke, loadJoke, loading } = useJoke();
+  const theme = useTheme();
 
   const reloadJoke = () => {
     if (reloadButtonRef.current) {
@@ -47,7 +49,12 @@ function Joke() {
 
       <JokeBox>
         {loading ? (
-          <ReactLoading type="bars" color="#F2591F" height={56} width={56} />
+          <ReactLoading
+            type="bars"
+            color={theme.colors.primary}
+            height={56}
+            width={56}
+          />
         ) : (
           <Typist avgTypingDelay={60} cursor={{ hideWhenDone: true }}>
             {joke.value}
@@ -58,7 +65,12 @@ function Joke() {
           {joke.categories.length ? (
             joke.categories.map(categoryLabel => <span>{categoryLabel}</span>)
           ) : (
-            <ReactLoading type="bars" color="#fff" height={26} width={26} />
+            <ReactLoading
+              type="bars"
+              color={theme.colors.light}
+              height={26}
+              width={26}
+            />
           )}
         </Badge>
       </JokeBox>

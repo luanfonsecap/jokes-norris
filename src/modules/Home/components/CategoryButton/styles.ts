@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  background: #24ade3;
+  background: ${({ theme }) => theme.colors.tertiary};
   border-radius: 4px;
-  box-shadow: 0 0 4px #8f8f8f;
+  box-shadow: 0 0 4px ${({ theme }) => theme.colors.shadow};
 
   padding: 16px;
   min-width: 140px;
@@ -11,7 +11,7 @@ export const Container = styled.button`
   text-align: center;
 
   span {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.textLight};
     font-size: 1rem;
   }
 
@@ -19,6 +19,6 @@ export const Container = styled.button`
 
   &:hover {
     transform: scale(1.1);
-    background: #f2591f;
+    background: ${({ theme }) => theme.colors.primary};
   }
 `;

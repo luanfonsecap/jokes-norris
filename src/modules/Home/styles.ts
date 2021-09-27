@@ -20,7 +20,7 @@ export const Container = styled.div`
       font-weight: 300;
 
       font-size: 1rem;
-      color: #8d6236;
+      color: ${({ theme }) => theme.colors.secondary};
       text-align: center;
     }
   }

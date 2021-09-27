@@ -4,7 +4,7 @@ export const Container = styled.footer`
   width: 100%;
   height: 50px;
 
-  background: #fff;
+  background: ${({ theme }) => theme.colors.light};
 
   display: flex;
   justify-content: center;
