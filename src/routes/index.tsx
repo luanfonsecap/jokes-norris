@@ -1,5 +1,3 @@
-import React from 'react';
-
 import HomeRoutes from '../modules/Home/routes';
 import JokeRoutes from '../modules/Joke/routes';
 import { RouteWithSubRoutesProps } from './RouteWithSubRoutes';
