@@ -29,6 +29,7 @@ export const Container = styled.div`
 
   h1 {
     font-size: 1.7rem;
+    color: ${({ theme }) => theme.colors.textDark};
   }
 
   @media (min-width: 768px) {

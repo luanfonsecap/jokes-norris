@@ -3,7 +3,6 @@ import React from 'react';
 import RenderRoutes, { RenderRoutesProps } from '../../routes/RenderRoutes';
 import { RouteWithSubRoutesProps } from '../../routes/RouteWithSubRoutes';
 import { JokeProvider } from './hooks/useJoke';
-
 import Joke from './index';
 
 const JokeRoutes: RouteWithSubRoutesProps[] = [

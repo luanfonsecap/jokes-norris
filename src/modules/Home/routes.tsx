@@ -1,5 +1,4 @@
 import { RouteWithSubRoutesProps } from '../../routes/RouteWithSubRoutes';
-
 import Home from './index';
 
 const HomeRoutes: RouteWithSubRoutesProps[] = [

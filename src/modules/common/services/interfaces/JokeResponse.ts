@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export interface JokeResponse {
   categories: string[];
   created_at: string;

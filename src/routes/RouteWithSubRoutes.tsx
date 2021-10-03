@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, RouteProps } from 'react-router-dom';
 
 export interface RouteWithSubRoutesProps extends Omit<RouteProps, 'component'> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   component: React.ComponentType<any>;
   routes?: RouteWithSubRoutesProps[];
   key: string;

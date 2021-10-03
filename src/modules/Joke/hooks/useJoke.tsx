@@ -22,12 +22,12 @@ const JokeProvider = ({ children }: WithChildren) => {
     value: '',
   });
   const [loading, setLoading] = useState(false);
-  const jokesService = new JokesService();
 
   const loadJoke = useCallback(async category => {
+    const jokesService = new JokesService();
     setLoading(true);
-    const joke = await jokesService.getRandomJokeByCategory(category);
-    setJoke(joke);
+    const response = await jokesService.getRandomJokeByCategory(category);
+    setJoke(response);
     setLoading(false);
   }, []);
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { WithChildren } from '../modules/common/utils/WithChildren';
-
 import RouteWithSubRoutes, {
   RouteWithSubRoutesProps,
 } from './RouteWithSubRoutes';

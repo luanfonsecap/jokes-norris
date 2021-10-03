@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from 'react';
+import ReactLoading from 'react-loading';
 import { useParams } from 'react-router-dom';
 import Typist from 'react-typist';
-import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
 
 import reloadImg from '../../assets/reload.svg';
+import Logo from '../common/components/Logo';
 import BackButton from './components/BackButton';
 import { useJoke } from './hooks/useJoke';
-
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
-import Logo from '../common/components/Logo';
 
 interface RouteParams {
   category: string;
@@ -30,10 +29,8 @@ function Joke() {
 
     setTimeout(() => {
       if (reloadButtonRef.current)
-        reloadButtonRef.current.className = reloadButtonRef.current.className.replace(
-          'hasClicked',
-          '',
-        );
+        reloadButtonRef.current.className =
+          reloadButtonRef.current.className.replace('hasClicked', '');
     }, 1200);
   };
 
@@ -63,7 +60,9 @@ function Joke() {
 
         <Badge>
           {joke.categories.length ? (
-            joke.categories.map(categoryLabel => <span>{categoryLabel}</span>)
+            joke.categories.map(categoryLabel => (
+              <span key={categoryLabel}>{categoryLabel}</span>
+            ))
           ) : (
             <ReactLoading
               type="bars"
