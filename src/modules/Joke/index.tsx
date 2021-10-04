@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ReactLoading from 'react-loading';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Typist from 'react-typist';
 import { useTheme } from 'styled-components';
 
