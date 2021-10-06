@@ -48,7 +48,9 @@ const JokeProvider = ({ children }: WithChildren) => {
       }
 
       const jokesAlreadyRead: string[] = JSON.parse(
-        localStorage.getItem(`${AppSignatureStorage}jokesAlreadyRead`) || '[]',
+        localStorage.getItem(
+          `${AppSignatureStorage}jokesAlreadyRead:${category}`,
+        ) || '[]',
       );
 
       if (jokesAlreadyRead.includes(response.id)) {
@@ -63,7 +65,7 @@ const JokeProvider = ({ children }: WithChildren) => {
       if (response) {
         jokesAlreadyRead.push(response.id);
         localStorage.setItem(
-          `${AppSignatureStorage}jokesAlreadyRead`,
+          `${AppSignatureStorage}jokesAlreadyRead:${category}`,
           JSON.stringify(jokesAlreadyRead),
         );
       }
