@@ -6,6 +6,7 @@ import { useTheme } from 'styled-components';
 
 import reloadImg from '../../assets/reload.svg';
 import Logo from '../common/components/Logo';
+import { AppSignatureStorage } from '../common/constants/storage';
 import BackButton from './components/BackButton';
 import { useJoke } from './hooks/useJoke';
 import { Container, JokeBox, Badge, ReloadButton } from './styles';
@@ -37,6 +38,14 @@ function Joke() {
   useEffect(() => {
     loadJoke(category);
   }, [loadJoke, category]);
+
+  useEffect(() => {
+    return () => {
+      localStorage.removeItem(
+        `${AppSignatureStorage}jokesAlreadyRead:${category}`,
+      );
+    };
+  }, [category]);
 
   return (
     <Container>
