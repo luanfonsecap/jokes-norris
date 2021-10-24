@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { mockedHistoryPush } from '../../../../../__tests__/mocks/ReactRouterDomMock';
-import { AllTheProviders } from '../../../../../__tests__/utils/AllTheProviders';
+import { mockedHistoryPush } from '../../../tests/mocks/ReactRouterDomMock';
+import { AllTheProviders } from '../../../tests/utils/AllTheProviders';
 
 import Switch from '..';
 

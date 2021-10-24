@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { AllTheProviders } from '../../../../../__tests__/utils/AllTheProviders';
+import { AllTheProviders } from '../../../tests/utils/AllTheProviders';
 
 import Switch from '..';
 
