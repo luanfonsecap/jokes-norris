@@ -59,6 +59,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
     "@testing-library/dom": "^8.9.1",
     "@types/react-lottie": "^1.2.6",
     "@types/react-router-dom": "^5.1.5",
