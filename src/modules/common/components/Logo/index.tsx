@@ -1,5 +1,4 @@
-import React from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 import logoImg from '../../../../assets/logo.svg';
 import { Container } from './styles';
