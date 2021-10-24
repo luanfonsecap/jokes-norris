@@ -14,6 +14,7 @@ function Switch({ onClick, checked = false }: SwitchProps) {
   return (
     <Container>
       <Toggle
+        data-testid="toggleInput"
         defaultChecked={checked}
         onClick={onClick}
         icons={{
