@@ -9,11 +9,8 @@ export const Container = styled.button`
   min-width: 140px;
 
   text-align: center;
-
-  span {
-    color: ${({ theme }) => theme.colors.textLight};
-    font-size: 1rem;
-  }
+  color: ${({ theme }) => theme.colors.textLight};
+  font-size: 1rem;
 
   transition: all 0.2s;
 

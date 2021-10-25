@@ -7,18 +7,14 @@ interface CategoryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   category: string;
 }
 
-const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
+function CategoryButton({ category }: CategoryButtonProps) {
   const history = useHistory();
 
   const navigateToJoke = useCallback(() => {
     history.push(`/joke/${category}`);
   }, [history, category]);
 
-  return (
-    <Container onClick={navigateToJoke}>
-      <span>{category}</span>
-    </Container>
-  );
-};
+  return <Container onClick={navigateToJoke}>{category}</Container>;
+}
 
 export default CategoryButton;
