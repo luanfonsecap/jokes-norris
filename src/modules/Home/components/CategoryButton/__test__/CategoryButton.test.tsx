@@ -1,11 +1,14 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { mockedHistoryPush } from '../../../../common/tests/mocks/ReactRouterDomMock';
-
 import CategoryButton from '..';
 
 import { AllTheProviders } from '../../../../common/tests/utils/AllTheProviders';
+
+const mockedHistoryPush = jest.fn();
+jest.mock('react-router-dom', () => ({
+  useHistory: () => ({ push: mockedHistoryPush }),
+}));
 
 const setup = (category: string) => {
   const renderResult = render(<CategoryButton category={category} />, {

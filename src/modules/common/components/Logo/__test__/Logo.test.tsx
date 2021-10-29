@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { mockedHistoryPush } from '../../../tests/mocks/ReactRouterDomMock';
 import { AllTheProviders } from '../../../tests/utils/AllTheProviders';
 
 import Switch from '..';
@@ -9,6 +8,11 @@ import Switch from '..';
 interface SetupProps {
   showTitle?: boolean;
 }
+
+const mockedHistoryPush = jest.fn();
+jest.mock('react-router-dom', () => ({
+  useHistory: () => ({ push: mockedHistoryPush }),
+}));
 
 const setup = ({ showTitle = false }: SetupProps) => {
   const renderResult = render(<Switch showTitle={showTitle} />, {
