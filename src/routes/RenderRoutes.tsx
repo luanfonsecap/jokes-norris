@@ -17,8 +17,8 @@ function RenderRoutes({ routes, provider: Provider }: RenderRoutesProps) {
       {routes.map(route => {
         if (Provider)
           return (
-            <Provider>
-              <RouteWithSubRoutes {...route} key={route.key} />
+            <Provider key={route.key}>
+              <RouteWithSubRoutes {...route} />
             </Provider>
           );
         return <RouteWithSubRoutes {...route} key={route.key} />;
