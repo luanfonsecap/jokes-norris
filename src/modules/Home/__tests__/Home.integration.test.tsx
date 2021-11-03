@@ -1,4 +1,8 @@
-import { render, waitFor } from '@testing-library/react';
+import {
+  render,
+  waitFor,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { setupServer } from 'msw/node';
 import { MemoryRouter } from 'react-router-dom';
@@ -43,9 +47,11 @@ describe('Home integration tests', () => {
 
   it('should navigate user to joke page with selected category on button clicked', async () => {
     const { renderResult } = setup();
-    const { getByRole, getByText } = renderResult;
+    const { getByRole, getByText, getByTestId } = renderResult;
 
     const categoryName = categories[0];
+
+    await waitForElementToBeRemoved(() => getByTestId('loading'));
 
     await waitFor(() => {
       categories.forEach(category => {
