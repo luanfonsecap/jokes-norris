@@ -11,6 +11,7 @@ import App from '../../../App';
 import { AppSignatureStorage } from '../../common/constants/storage';
 import { categories } from '../../common/tests/mocks/categories';
 import { handlers } from '../../common/tests/mocks/handlers';
+import { getRandomNumber } from '../../common/tests/utils/getRandomNumber';
 
 const server = setupServer(...handlers);
 
@@ -49,7 +50,7 @@ describe('Home integration tests', () => {
     const { renderResult } = setup();
     const { getByRole, getByText, getByTestId } = renderResult;
 
-    const categoryName = categories[0];
+    const categoryName = categories[getRandomNumber(1, categories.length)];
 
     await waitForElementToBeRemoved(() => getByTestId('loading'));
 
