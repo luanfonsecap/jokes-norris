@@ -1,13 +1,15 @@
+import faker from 'faker';
+
 const categories = ['animal', 'career', 'celebrity', 'dev'];
 
 function jokeBuilder(category: string) {
   return {
     categories: [category],
-    created_at: new Date().toISOString(),
-    icon_url: 'https://assets.chucknorris.host/img/avatar/chuck-norris.png',
-    id: '1',
+    created_at: faker.date,
+    icon_url: faker.internet.avatar,
+    id: faker.datatype.uuid(),
     url: 'https://api.chucknorris.io/jokes',
-    value: 'Chuck Norris Joke',
+    value: faker.lorem,
   };
 }
 
