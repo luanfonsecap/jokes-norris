@@ -57,12 +57,17 @@ function Joke() {
         {loading ? (
           <ReactLoading
             type="bars"
+            data-testid="loading"
             color={theme.colors.primary}
             height={56}
             width={56}
           />
         ) : (
-          <Typist avgTypingDelay={60} cursor={{ hideWhenDone: true }}>
+          <Typist
+            avgTypingDelay={60}
+            cursor={{ hideWhenDone: true }}
+            data-testid="joke"
+          >
             {joke.value}
           </Typist>
         )}
