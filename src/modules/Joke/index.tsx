@@ -30,8 +30,10 @@ function Joke() {
 
     setTimeout(() => {
       if (reloadButtonRef.current)
-        reloadButtonRef.current.className =
-          reloadButtonRef.current.className.replace('hasClicked', '');
+        reloadButtonRef.current.className = reloadButtonRef.current.className.replace(
+          'hasClicked',
+          '',
+        );
     }, 1200);
   };
 

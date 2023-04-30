@@ -82,6 +82,9 @@ Se não tiver o [Yarn](https://yarnpkg.com/) pode-se utilizar o NPM.
 - [x] Unit tests
 - [x] Integration tests
 - [ ] SSR branch version
+- [ ] Micro front-ends branch version
+- [ ] Test hooks
+- [x] Code Splitting
 
 <br>
 
