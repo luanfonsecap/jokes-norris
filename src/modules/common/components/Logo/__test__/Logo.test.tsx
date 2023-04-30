@@ -1,21 +1,22 @@
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import { AllTheProviders } from '../../../tests/utils/AllTheProviders';
 
-import Switch from '..';
+import { Logo } from '..';
 
 interface SetupProps {
   showTitle?: boolean;
 }
 
-const mockedHistoryPush = jest.fn();
-jest.mock('react-router-dom', () => ({
+const mockedHistoryPush = vi.fn();
+vi.mock('react-router-dom', () => ({
   useHistory: () => ({ push: mockedHistoryPush }),
 }));
 
 const setup = ({ showTitle = false }: SetupProps) => {
-  const renderResult = render(<Switch showTitle={showTitle} />, {
+  const renderResult = render(<Logo showTitle={showTitle} />, {
     wrapper: AllTheProviders,
   });
 
@@ -24,7 +25,9 @@ const setup = ({ showTitle = false }: SetupProps) => {
 
 describe('Logo', () => {
   it('should render with default props', () => {
-    const { renderResult } = setup({});
+    const renderResult = render(<Logo />, {
+      wrapper: AllTheProviders,
+    });
     const { container, getByAltText } = renderResult;
 
     expect(container).toBeInTheDocument();
@@ -32,7 +35,9 @@ describe('Logo', () => {
   });
 
   it('should show title', () => {
-    const { renderResult } = setup({ showTitle: true });
+    const renderResult = render(<Logo showTitle />, {
+      wrapper: AllTheProviders,
+    });
 
     const { getByText } = renderResult;
 
@@ -40,7 +45,9 @@ describe('Logo', () => {
   });
 
   it('should redirect to home page when clicked', () => {
-    const { renderResult } = setup({});
+    const renderResult = render(<Logo />, {
+      wrapper: AllTheProviders,
+    });
 
     const { getByRole } = renderResult;
 

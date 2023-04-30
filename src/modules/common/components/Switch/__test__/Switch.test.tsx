@@ -1,5 +1,6 @@
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import { AllTheProviders } from '../../../tests/utils/AllTheProviders';
 
@@ -10,7 +11,7 @@ interface SetupProps {
 }
 
 const setup = ({ initialChecked = false }: SetupProps) => {
-  const onClick = jest.fn();
+  const onClick = vi.fn();
   const renderResult = render(
     <Switch onClick={onClick} checked={initialChecked} />,
     {

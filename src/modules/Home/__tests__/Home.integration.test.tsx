@@ -1,5 +1,6 @@
 import {
   render,
+  screen,
   waitFor,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
@@ -15,10 +16,6 @@ import { getRandomNumber } from '../../common/tests/utils/getRandomNumber';
 
 const server = setupServer(...handlers);
 
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
-
 const setup = () => {
   const renderResult = render(
     <MemoryRouter>
@@ -30,9 +27,13 @@ const setup = () => {
 };
 
 describe('Home integration tests', () => {
-  it('should change theme clicking on switcher', () => {
+  beforeAll(() => server.listen());
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
+
+  it('should change theme clicking on switcher', async () => {
     const { renderResult } = setup();
-    const { getByTestId, getByAltText } = renderResult;
+    const { getByTestId, getByAltText, getByRole } = renderResult;
 
     const sunThemeIcon = getByAltText('Sun in light mode');
     const moonThemeIcon = getByAltText('Moon in dark mode');

@@ -5,7 +5,7 @@ import Typist from 'react-typist';
 import { useTheme } from 'styled-components';
 
 import reloadImg from '../../assets/reload.svg';
-import Logo from '../common/components/Logo';
+import { Logo } from '../common/components/Logo';
 import { AppSignatureStorage } from '../common/constants/storage';
 import BackButton from './components/BackButton';
 import { useJoke } from './hooks/useJoke';

@@ -1,12 +1,13 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import BackButton from '..';
 
 import { AllTheProviders } from '../../../../common/tests/utils/AllTheProviders';
 
-const mockedGoBack = jest.fn();
-jest.mock('react-router-dom', () => ({
+const mockedGoBack = vi.fn();
+vi.mock('react-router-dom', () => ({
   useHistory: () => ({ goBack: mockedGoBack }),
 }));
 

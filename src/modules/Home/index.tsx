@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
 
-import Logo from '../common/components/Logo';
+import { Logo } from '../common/components/Logo';
 import Switch from '../common/components/Switch';
 import { useToggleTheme } from '../common/hooks/useToggleTheme';
 import CategoriesService from '../common/services/categoriesService';

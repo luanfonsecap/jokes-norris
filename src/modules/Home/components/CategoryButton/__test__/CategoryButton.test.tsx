@@ -1,12 +1,13 @@
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import CategoryButton from '..';
 
 import { AllTheProviders } from '../../../../common/tests/utils/AllTheProviders';
 
-const mockedHistoryPush = jest.fn();
-jest.mock('react-router-dom', () => ({
+const mockedHistoryPush = vi.fn();
+vi.mock('react-router-dom', () => ({
   useHistory: () => ({ push: mockedHistoryPush }),
 }));
 

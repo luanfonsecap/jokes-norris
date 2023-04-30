@@ -20,4 +20,4 @@ function Logo({ showTitle }: LogoProps) {
   );
 }
 
-export default Logo;
+export { Logo };
