@@ -63,7 +63,7 @@ Você pode testar a aplicação hospeda [clicando aqui](https://jokes-norris.net
 
 ## :rocket: Rodando o Projeto
 
-É necessário ter o ambiente necessário para <a href="https://pt-br.reactjs.org/">React</a>.
+É necessário ter o ambiente para executar projetos <a href="https://pt-br.reactjs.org/">React</a>.
 <br>
 Para iniciar a aplicação clone este repositório e execute os comandos abaixo:
 
