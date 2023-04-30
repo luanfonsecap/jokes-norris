@@ -30,7 +30,6 @@
   <br>
 </p>
 
-
 # :muscle: O Projeto
 
 **Jokes Norris** é uma aplicação que consome a api do <a href="https://api.chucknorris.io/">Chuck Norris IO</a>
@@ -60,7 +59,6 @@ Você pode testar a aplicação hospeda [clicando aqui](https://jokes-norris.net
 - React Loading
 - Axios
 
-
 <br>
 
 ## :rocket: Rodando o Projeto
@@ -78,9 +76,12 @@ Se não tiver o [Yarn](https://yarnpkg.com/) pode-se utilizar o NPM.
 
 <br>
 
-## :bicyclist: Roadmap
+## :bicyclist: RoadMap
 
-- [ ] Server Side Rendering
+- [x] Vite
+- [x] Unit tests
+- [x] Integration tests
+- [ ] SSR branch version
 
 <br>
 
