@@ -1,6 +1,5 @@
 import {
   render,
-  screen,
   waitFor,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
@@ -10,6 +9,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import App from '../../../App';
 import { AppSignatureStorage } from '../../common/constants/storage';
+import { lightTheme, darkTheme } from '../../common/css/theme';
 import { categories } from '../../common/tests/mocks/categories';
 import { handlers } from '../../common/tests/mocks/handlers';
 import { getRandomNumber } from '../../common/tests/utils/getRandomNumber';
@@ -33,7 +33,7 @@ describe('Home integration tests', () => {
 
   it('should change theme clicking on switcher', async () => {
     const { renderResult } = setup();
-    const { getByTestId, getByAltText, getByRole } = renderResult;
+    const { getByTestId, getByAltText, findByText } = renderResult;
 
     const sunThemeIcon = getByAltText('Sun in light mode');
     const moonThemeIcon = getByAltText('Moon in dark mode');
@@ -41,27 +41,36 @@ describe('Home integration tests', () => {
     expect(localStorage.getItem(`${AppSignatureStorage}theme`)).toBe(null);
     expect(moonThemeIcon).toBeVisible();
 
+    const categoryName = categories[getRandomNumber(0, categories.length - 1)];
+
+    const button = await findByText(categoryName);
+
+    expect(button).toHaveStyle({
+      color: lightTheme.colors.textLight,
+    });
+
     userEvent.click(getByTestId('toggleInput'));
 
     expect(localStorage.getItem(`${AppSignatureStorage}theme`)).toBe('dark');
     expect(sunThemeIcon).toBeVisible();
+    expect(button).toHaveStyle({
+      color: darkTheme.colors.textLight,
+    });
   });
 
   it('should navigate user to joke page with selected category on button clicked', async () => {
     const { renderResult } = setup();
-    const { getByRole, getByText, getByTestId } = renderResult;
+    const { getAllByRole, getByText, getByTestId } = renderResult;
 
-    const categoryName = categories[getRandomNumber(1, categories.length)];
+    const categoryName = categories[getRandomNumber(0, categories.length - 1)];
 
     await waitForElementToBeRemoved(() => getByTestId('loading'));
 
     await waitFor(() => {
-      categories.forEach(category => {
-        expect(getByRole('button', { name: category })).toBeInTheDocument();
-      });
+      expect(getAllByRole('button').length).toBe(categories.length + 1); // +1 because of logo button
     });
 
-    const button = getByRole('button', { name: categoryName });
+    const button = getByText(categoryName);
 
     userEvent.click(button);
 
