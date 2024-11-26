@@ -25,32 +25,32 @@
   <br>
 
   <p align="center">
-    :sparkles: Desafio frontend proposto no Github da <a href="https://github.com/GuiaBolso/seja-um-guia-front">Guia Bolso</a>
+    :sparkles: Frontend challenge proposed on <a href="https://github.com/GuiaBolso/seja-um-guia-front">Guia Bolso's</a> Github
   </p>
   <br>
 </p>
 
-# :muscle: O Projeto
+# :muscle: The Project
 
-**Jokes Norris** é uma aplicação que consome a api do <a href="https://api.chucknorris.io/">Chuck Norris IO</a>
-e exibe piadas sobre o personagem apartir de uma categoria selecionada.
-
-<br>
-
-Você pode testar a aplicação hospeda [clicando aqui](https://jokes-norris.netlify.app/).
-
-<img alt="Gif de Exemplo" src="https://raw.githubusercontent.com/luanfonsecap/jokes-norris/master/assets/norris-jokes-example.gif" />
+**Jokes Norris** is an application that consumes the <a href="https://api.chucknorris.io/">Chuck Norris IO</a>
+api and displays jokes about the character from a selected category.
 
 <br>
 
-## :fire: Funcionalidades
+You can test the application by [clicking here](https://jokes-norris.netlify.app/).
 
-- Selecionar uma categoria
-- Recarregar uma nova piada
+<img alt="Example" src="https://raw.githubusercontent.com/luanfonsecap/jokes-norris/master/assets/norris-jokes-example.gif" />
 
 <br>
 
-## ⚗️ Tecnologias
+## :fire: Features
+
+- Select a category
+- Load new joke
+
+<br>
+
+## ⚗️ Tech Stack
 
 - React
 - Styled Components
@@ -61,22 +61,22 @@ Você pode testar a aplicação hospeda [clicando aqui](https://jokes-norris.net
 
 <br>
 
-## :rocket: Rodando o Projeto
+## :rocket: Run the project
 
-É necessário ter o ambiente para executar projetos <a href="https://pt-br.reactjs.org/">React</a>.
+You need to have the environment to run <a href="https://pt-br.reactjs.org/">React</a> projects.
 <br>
-Para iniciar a aplicação clone este repositório e execute os comandos abaixo:
+To start the application, clone this repository and run the commands below:
 
 ```
 cd jokes-norris
 yarn && yarn start
 ```
 
-Se não tiver o [Yarn](https://yarnpkg.com/) pode-se utilizar o NPM.
+If you don't have [Yarn](https://yarnpkg.com/) you can use NPM.
 
 <br>
 
-## :bicyclist: RoadMap
+## :bicyclist: Roadmap
 
 - [x] Vite
 - [x] Unit tests
@@ -88,14 +88,14 @@ Se não tiver o [Yarn](https://yarnpkg.com/) pode-se utilizar o NPM.
 
 <br>
 
-## :pencil: Licença
+## :pencil: License
 
-Este projeto está sob a licença MIT. Consulte a [LICENÇA](https://github.com/luanfonsecap/jokes-norris/blob/master/LICENSE) para obter mais informações.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/luanfonsecap/jokes-norris/blob/master/LICENSE) for more information.
 
 <br>
 
 ---
 
 <h6 align="center">
-	Feito com :purple_heart: por Luan Fonseca
+	Made with :purple_heart: by Luan Fonseca
 </h6>
